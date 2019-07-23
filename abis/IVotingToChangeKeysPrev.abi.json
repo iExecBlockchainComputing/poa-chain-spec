@@ -2,7 +2,26 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "bridgesAllowedLength",
+    "name": "nextBallotId",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "activeBallots",
     "outputs": [
       {
         "name": "",
@@ -16,152 +35,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "emissionFunds",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "blockRewardAmount",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "emissionFundsAmount",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "name": "amount",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "name": "receiver",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "name": "bridge",
-        "type": "address"
-      }
-    ],
-    "name": "AddedReceiver",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "name": "receivers",
-        "type": "address[]"
-      },
-      {
-        "indexed": false,
-        "name": "rewards",
-        "type": "uint256[]"
-      }
-    ],
-    "name": "Rewarded",
-    "type": "event"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_amount",
-        "type": "uint256"
-      },
-      {
-        "name": "_receiver",
-        "type": "address"
-      }
-    ],
-    "name": "addExtraReceiver",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "benefactors",
-        "type": "address[]"
-      },
-      {
-        "name": "kind",
-        "type": "uint16[]"
-      }
-    ],
-    "name": "reward",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address[]"
-      },
-      {
-        "name": "",
-        "type": "uint256[]"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "bridgesAllowed",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address[3]"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "pure",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_bridge",
-        "type": "address"
-      }
-    ],
-    "name": "bridgeAmount",
+    "name": "activeBallotsLength",
     "outputs": [
       {
         "name": "",
@@ -176,11 +50,30 @@
     "constant": true,
     "inputs": [
       {
-        "name": "_index",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "validatorActiveBallots",
+    "outputs": [
+      {
+        "name": "",
         "type": "uint256"
       }
     ],
-    "name": "extraReceiverByIndex",
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "getAffectedKey",
     "outputs": [
       {
         "name": "",
@@ -195,11 +88,30 @@
     "constant": true,
     "inputs": [
       {
-        "name": "_receiver",
-        "type": "address"
+        "name": "",
+        "type": "uint256"
       }
     ],
-    "name": "extraReceiverAmount",
+    "name": "getAffectedKeyType",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "getEndTime",
     "outputs": [
       {
         "name": "",
@@ -213,26 +125,64 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "extraReceiversLength",
+    "name": "getKeysManager",
     "outputs": [
       {
         "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_account",
         "type": "address"
       }
     ],
-    "name": "mintedForAccount",
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "getMiningKey",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "getProgress",
+    "outputs": [
+      {
+        "name": "",
+        "type": "int256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "getBallotType",
     "outputs": [
       {
         "name": "",
@@ -247,85 +197,166 @@
     "constant": true,
     "inputs": [
       {
-        "name": "_account",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "getIsFinalized",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "getMinThresholdOfVoters",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "getStartTime",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "getTotalVoters",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "hasAlreadyVoted",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "votingState",
+    "outputs": [
+      {
+        "name": "startTime",
+        "type": "uint256"
+      },
+      {
+        "name": "endTime",
+        "type": "uint256"
+      },
+      {
+        "name": "affectedKey",
         "type": "address"
       },
       {
-        "name": "_blockNumber",
+        "name": "affectedKeyType",
         "type": "uint256"
-      }
-    ],
-    "name": "mintedForAccountInBlock",
-    "outputs": [
+      },
       {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_blockNumber",
-        "type": "uint256"
-      }
-    ],
-    "name": "mintedInBlock",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "mintedTotally",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_bridge",
+        "name": "miningKey",
         "type": "address"
-      }
-    ],
-    "name": "mintedTotallyByBridge",
-    "outputs": [
+      },
       {
-        "name": "",
+        "name": "totalVoters",
         "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "proxyStorage",
-    "outputs": [
+      },
       {
-        "name": "",
+        "name": "progress",
+        "type": "int256"
+      },
+      {
+        "name": "isFinalized",
+        "type": "bool"
+      },
+      {
+        "name": "quorumState",
+        "type": "uint8"
+      },
+      {
+        "name": "ballotType",
+        "type": "uint256"
+      },
+      {
+        "name": "index",
+        "type": "uint256"
+      },
+      {
+        "name": "minThresholdOfVoters",
+        "type": "uint256"
+      },
+      {
+        "name": "creator",
         "type": "address"
+      },
+      {
+        "name": "memo",
+        "type": "string"
       }
     ],
     "payable": false,

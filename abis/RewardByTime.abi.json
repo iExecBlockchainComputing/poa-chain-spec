@@ -1,46 +1,117 @@
 [
   {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "name": "thresholdType",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "name": "newValue",
-        "type": "uint256"
-      }
-    ],
-    "name": "ThresholdChanged",
-    "type": "event"
-  },
-  {
     "constant": true,
-    "inputs": [
-      {
-        "name": "_ballotType",
-        "type": "uint256"
-      },
-      {
-        "name": "_affectedKeyType",
-        "type": "uint256"
-      },
-      {
-        "name": "_affectedKey",
-        "type": "address"
-      },
-      {
-        "name": "_miningKey",
-        "type": "address"
-      }
-    ],
-    "name": "areKeysBallotParamsValid",
+    "inputs": [],
+    "name": "emissionFunds",
     "outputs": [
       {
         "name": "",
-        "type": "bool"
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "blockRewardAmount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "threshold",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "emissionFundsAmount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "receivers",
+        "type": "address[]"
+      },
+      {
+        "indexed": false,
+        "name": "rewards",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "Rewarded",
+    "type": "event"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "reward",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]"
+      },
+      {
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getPayoutKeys",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getTime",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
       }
     ],
     "payable": false,
@@ -64,91 +135,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "initDisabled",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_thresholds",
-        "type": "uint256[]"
-      }
-    ],
-    "name": "init",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "metadataChangeConfirmationsLimit",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "pure",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_prevBallotsStorage",
-        "type": "address"
-      }
-    ],
-    "name": "migrate",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_newValue",
-        "type": "uint256"
-      },
-      {
-        "name": "_thresholdType",
-        "type": "uint256"
-      }
-    ],
-    "name": "setThreshold",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_ballotType",
-        "type": "uint256"
-      }
-    ],
-    "name": "getBallotThreshold",
+    "name": "keyIndex",
     "outputs": [
       {
         "name": "",
@@ -162,53 +149,30 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "getVotingToChangeThreshold",
+    "name": "lastTime",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_index",
+        "type": "uint256"
+      }
+    ],
+    "name": "payoutKeys",
     "outputs": [
       {
         "name": "",
         "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getProxyThreshold",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getBallotLimitPerValidator",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getMaxLimitBallot",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
       }
     ],
     "payable": false,
