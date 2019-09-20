@@ -24,6 +24,8 @@
     "maximumExtraDataSize": "0x20",
     "minGasLimit": "0x1388",
     "networkID": "0x85",
+    "transactionPermissionContract":"0xe20d0531b804fe61caa614a1af9a15d2cccb6104",
+    "transactionPermissionContractTransition": 1015750,
     "eip140Transition": "0x0",
     "eip211Transition": "0x0",
     "eip214Transition": "0x0",
