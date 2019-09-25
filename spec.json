@@ -1,5 +1,5 @@
 {
-  "name": "testing",
+  "name": "bellecour",
   "engine": {
     "authorityRound": {
       "params": {
@@ -11,7 +11,7 @@
           "multi": {
             "0": {
               "list": [
-                "0xA62512FD89DA3a16416105621aB89577F597557E"
+                "0x77ca78b39a75f4265b73b9cb8a5f24047a9edc79"
               ]
             }
           }
@@ -23,7 +23,7 @@
     "gasLimitBoundDivisor": "0x400",
     "maximumExtraDataSize": "0x20",
     "minGasLimit": "0x1388",
-    "networkID": "0x87",
+    "networkID": "0x86",
     "eip140Transition": "0x0",
     "eip211Transition": "0x0",
     "eip214Transition": "0x0",
