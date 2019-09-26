@@ -13,6 +13,9 @@
               "list": [
                 "0x77ca78b39a75f4265b73b9cb8a5f24047a9edc79"
               ]
+            },
+            "20000": {
+              "safeContract": "0xf2f8ebd6df066f93dc012cc94fbfa4592727a910"
             }
           }
         }
@@ -32,7 +35,10 @@
     "eip1014Transition": "0x0",
     "eip1052Transition": "0x0",
     "eip1283Transition": "0x0",
-    "eip1283DisableTransition": "0x0"
+    "eip1283DisableTransition": "0x0",
+    "registrar": "0x7b79ddc96db3a4cf4f3d6e2fbd820654a35b8500",
+    "transactionPermissionContract":"0x5b422a904174ab816b381e94ba740a20b2ca8132",
+    "transactionPermissionContractTransition": 20000
   },
   "genesis": {
     "seal": {
