@@ -1,5 +1,5 @@
 {
-  "name": "viviani",
+  "name": "sandbox",
   "engine": {
     "authorityRound": {
       "params": {
@@ -10,12 +10,11 @@
         "validators": {
           "multi": {
             "0": {
+              "list":[""],
               "safeContract": "0x8bf38d4764929064f2d4d3a56520a76ab3df415b"
             }
           }
-        },
-        "blockRewardContractAddress": "0xb3474eeaba26d8b700dbb7667a6f04c826a6523b",
-        "blockRewardContractTransition": 1200
+        }
       }
     }
   },
@@ -23,7 +22,7 @@
     "gasLimitBoundDivisor": "0x400",
     "maximumExtraDataSize": "0x20",
     "minGasLimit": "0x1388",
-    "networkID": "0x85",
+    "networkID": "0x8A",
     "transactionPermissionContract":"0xe20d0531b804fe61caa614a1af9a15d2cccb6104",
     "transactionPermissionContractTransition": 1015750,
     "eip140Transition": "0x0",
@@ -100,7 +99,7 @@
         }
       }
     },
-    "0x44B318A63D2E69d4Cd6144B33B3e823Fa02Cec40": {
+    "0x6EbDdD444181286f4a77e902C6Ff817D76A16Ea0": {
       "balance": "252460800000000000000000000"
     },
     "0x8bf38d4764929064f2d4d3a56520a76ab3df415b": {
