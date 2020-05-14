@@ -1,5 +1,5 @@
 {
-  "name": "test-terraform",
+  "name": "brisge-tester",
   "engine": {
     "authorityRound": {
       "params": {
