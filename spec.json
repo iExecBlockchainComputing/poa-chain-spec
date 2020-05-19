@@ -1,5 +1,5 @@
 {
-  "name": "brisge-tester",
+  "name": "contracts-tester",
   "engine": {
     "authorityRound": {
       "params": {
