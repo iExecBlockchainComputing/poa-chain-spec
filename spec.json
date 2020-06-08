@@ -39,7 +39,11 @@
     "eip1014Transition": "0x0",
     "eip1052Transition": "0x0",
     "eip1283Transition": "0x0",
-    "eip1283DisableTransition": "0x0"
+    "eip1283DisableTransition": "0x0",
+    "eip1344Transition": "0x548D4B",
+    "eip1706Transition": "0x548D4B",
+    "eip1884Transition": "0x548D4B",
+    "eip2028Transition": "0x548D4B" 
   },
   "genesis": {
     "seal": {
@@ -143,6 +147,17 @@
           "alt_bn128_pairing": {
             "base": 100000,
             "pair": 80000
+          }
+        }
+      }
+    },
+    "0x0000000000000000000000000000000000000009": {
+      "builtin": {
+        "name": "blake2_f",
+        "activate_at": "0x548D4B",
+        "pricing": {
+          "blake2_f": {
+            "gas_per_round": 1
           }
         }
       }
