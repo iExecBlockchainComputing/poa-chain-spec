@@ -1,0 +1,6 @@
+bootnode 3.213.233.241
+blockscout 3.88.27.252
+validator 52.54.240.5
+validator 54.152.167.239
+validator 18.232.182.136
+validator 35.175.230.237
